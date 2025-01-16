@@ -278,6 +278,11 @@ btnIniciar.addEventListener("click", async () => {
     controls.style.display = "block";
 
     while (repeticiones > 0) {
+      console.log("ahora es momento de elegir la carta");
+    
+      //para redirigir a la seccion de control
+      document.getElementById("controls").scrollIntoView({ behavior: "smooth" });
+    
       await esperarSeleccionGrupo();
       ordenarListas(grupoSeleccionado);
       //await mostrarCartas();
